@@ -1,0 +1,221 @@
+[{
+  "id": 0,
+  "nome": "Januario",
+  "sobrenome": "Fonseca",
+  "cor": 1,
+  "idPai": null,
+  "idMae": null,
+  "regiaoNascimento": 2,
+  "escolaridade": 2
+},
+{
+  "id": 0,
+  "nome": "Genilda",
+  "sobrenome": "Fonseca",
+  "cor": 5,
+  "idPai": null,
+  "idMae": null,
+  "regiaoNascimento": 2,
+  "escolaridade": 1
+},
+{
+  "id": 0,
+  "nome": "Rui",
+  "sobrenome": "Fonseca",
+  "cor": 1,
+  "idPai": 1,
+  "idMae": 2,
+  "regiaoNascimento": 2,
+  "escolaridade": 3
+},
+{
+  "id": 0,
+  "nome": "Marcos",
+  "sobrenome": "Fonseca",
+  "cor": 1,
+  "idPai": 1,
+  "idMae": 2,
+  "regiaoNascimento": 2,
+  "escolaridade": 1
+},
+{
+  "id": 0,
+  "idPai": null,
+  "idMae": null,
+  "nome": "Josefina",
+  "sobrenome": "Souza",
+  "cor": 1,
+  "regiaoNascimento": 4,
+  "escolaridade": 1
+},
+{
+  "id": 0,
+  "idPai": null,
+  "idMae": null,
+  "nome": "Edilberto",
+  "sobrenome": "Souza",
+  "cor": 1,
+  "regiaoNascimento": 4,
+  "escolaridade": 1
+},
+{
+  "id": 0,
+  "nome": "Elpidio",
+  "sobrenome": "Souza",
+  "cor": 1,
+  "idPai": null,
+  "idMae": null,
+  "regiaoNascimento": 3,
+  "escolaridade": 1
+},
+{
+  "id": 0,
+  "nome": "Hortencia",
+  "sobrenome": "Souza",
+  "cor": 1,
+  "idPai": 6,
+  "idMae": 5,
+  "regiaoNascimento": 3,
+  "escolaridade": 1
+},
+{
+  "id": 0,
+  "nome": "Maria",
+  "sobrenome": "Souza",
+  "cor": 1,
+  "idPai": 7,
+  "idMae": 8,
+  "regiaoNascimento": 3,
+  "escolaridade": 1
+},
+{
+  "id": 0,
+  "nome": "Thiago",
+  "sobrenome": "Fonseca",
+  "cor": 1,
+  "idPai": 4,
+  "idMae": 9,
+  "regiaoNascimento": 3,
+  "escolaridade": 4
+},
+{
+  "id": 0,
+  "nome": "Tati",
+  "sobrenome": "Fonseca",
+  "cor": 1,
+  "idPai": 4,
+  "idMae": 9,
+  "regiaoNascimento": 3,
+  "escolaridade": 6
+},
+{
+  "id": 0,
+  "nome": "Fran",
+  "sobrenome": "Fonseca",
+  "cor": 1,
+  "idPai": 4,
+  "idMae": 9,
+  "regiaoNascimento": 3,
+  "escolaridade": 4
+},
+{
+  "id": 0,
+  "nome": "Giovanni",
+  "sobrenome": "Fonseca",
+  "cor": 1,
+  "idPai": 10,
+  "idMae": null,
+  "regiaoNascimento": 3,
+  "escolaridade": 1
+},
+{
+  "id": 0,
+  "nome": "Igor",
+  "sobrenome": "Almeida",
+  "cor": 2,
+  "idPai": null,
+  "idMae": null,
+  "regiaoNascimento": 5,
+  "escolaridade": 1
+},
+{
+  "id": 0,
+  "idPai": null,
+  "idMae": null,
+  "nome": "Thiago",
+  "sobrenome": "Escobar",
+  "cor": 1,
+  "regiaoNascimento": 1,
+  "escolaridade": 4
+},
+{
+  "id": 0,
+  "idPai": null,
+  "idMae": null,
+  "nome": "Thiago",
+  "sobrenome": "Bernadelo",
+  "cor": 1,
+  "regiaoNascimento": 1,
+  "escolaridade": 4
+},
+{
+  "id": 0,
+  "idPai": null,
+  "idMae": null,
+  "nome": "Thiago",
+  "sobrenome": "Abravanel",
+  "cor": 2,
+  "regiaoNascimento": 1,
+  "escolaridade": 4
+},
+{
+  "id": 0,
+  "idPai": null,
+  "idMae": null,
+  "nome": "José",
+  "sobrenome": "Ferrari",
+  "cor": 3,
+  "regiaoNascimento": 1,
+  "escolaridade": 4
+},
+{
+  "id": 0,
+  "idPai": null,
+  "idMae": null,
+  "nome": "Thiago",
+  "sobrenome": "Bustamante",
+  "cor": 4,
+  "regiaoNascimento": 3,
+  "escolaridade": 7
+},
+{
+  "id": 0,
+  "idPai": null,
+  "idMae": null,
+  "nome": "Alzira",
+  "sobrenome": "Vicentini",
+  "cor": 1,
+  "regiaoNascimento": 4,
+  "escolaridade": 5
+},
+{
+  "id": 0,
+  "idPai": null,
+  "idMae": 21,
+  "nome": "Daisy",
+  "sobrenome": "Vicentini",
+  "cor": 1,
+  "regiaoNascimento": 4,
+  "escolaridade": 5
+},
+{
+  "id": 0,
+  "idPai": null,
+  "idMae": 22,
+  "nome": "Ana",
+  "sobrenome": "Vicentini",
+  "cor": 1,
+  "regiaoNascimento": 4,
+  "escolaridade": 5
+}]
+
