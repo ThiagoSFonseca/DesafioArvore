@@ -4,6 +4,7 @@ using DesafioArvore.Domain.Services;
 using DesafioArvore.Infraestrutura.Repository;
 using Microsoft.EntityFrameworkCore;
 using DesafioArvore.Infraestrutura.Persistence;
+using Microsoft.AspNetCore.Mvc;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace DesafioArvore
@@ -32,7 +33,7 @@ namespace DesafioArvore
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
-                app.UseSwaggerUI();
+                app.UseSwaggerUI();                
             }
 
             app.UseHttpsRedirection();

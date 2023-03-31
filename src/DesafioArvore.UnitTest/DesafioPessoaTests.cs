@@ -12,12 +12,12 @@ namespace DesafioArvore.UnitTest
     public class DesafioPessoaTests
     {
         private readonly Mock<IPessoaDomainService> _domainServiceMock;
-        private readonly PessoaController _pessoaController;
+        private readonly PessoasController _pessoaController;
 
         public DesafioPessoaTests()
         {
             _domainServiceMock = new Mock<IPessoaDomainService>();
-            _pessoaController = new PessoaController(_domainServiceMock.Object);
+            _pessoaController = new PessoasController(_domainServiceMock.Object);
         }
 
         [Fact]

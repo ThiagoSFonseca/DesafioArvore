@@ -11,43 +11,20 @@ using Microsoft.SqlServer.Server;
 namespace DesafioArvore.Controllers
 {
 
-    [Route("api/[controller]")]
+    [Route("api/")]
     [ApiController]
-    public class PessoaController : ControllerBase
+    public class PessoasController : ControllerBase
     {
         private readonly IPessoaDomainService _pessoaDomainService;
 
-        public PessoaController(IPessoaDomainService pessoaDomainService)
+        public PessoasController(IPessoaDomainService pessoaDomainService)
           {
             _pessoaDomainService = pessoaDomainService;
           }
 
         #region GET
 
-        [Route("ObterTodasPessoas")]
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<Pessoa>>> ObterTodasPessoas()
-        {
-            var listaPessoas = await _pessoaDomainService.ObterTodosAsync();
-            return new OkObjectResult(listaPessoas);
-        }
-
-        [Route("ObterPessoaPorID")]
-        [HttpGet]
-        public async Task<ActionResult<Pessoa>> ObterPessoaPorID(int id)
-        {
-            var pessoa = await _pessoaDomainService.ObterPorID(id);
-
-            if (pessoa == null || pessoa.Id != id)
-            {
-                return NotFound("Pessoa não encontrada");
-            }
-
-            return Ok(pessoa);
-        }
-
-        [Route("ObterPessoasPorFiltros")]
-        [HttpGet]
+        [HttpGet("pessoas")]
         public async Task<ActionResult<IEnumerable<Pessoa>>> ObterPessoaPorFiltros(int? id, string? nome, 
                                                                         string? sobrenome, CorDaPele? cor, int? idPai, int? idMae,
                                                                         RegiaoBrasil? regiaoNascimento, NivelEscolaridade? escolaridade)
@@ -62,7 +39,7 @@ namespace DesafioArvore.Controllers
             return Ok(retorno);
         }
         
-        [Route("ObterPercentualPessoasComMesmoNomePorRegiao")]
+        [Route("pessoas/{regiao}/percentual")]
         [HttpGet]
         public async Task<ActionResult<Tuple<string,double>>> ObterPercentualPessoasComMesmoNomePorRegiao(RegiaoBrasil regiao)
         {
@@ -76,7 +53,7 @@ namespace DesafioArvore.Controllers
                           
         }
 
-        [Route("ObterArvoreGenealogicaPorNivel")]
+        [Route("pessoas/{id}/arvore-genealogica/{nivelMaximoArvore}")]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Pessoa>>> ObterArvoreGenealogicaPorNivel(int id, int nivelMaximoArvore)
         {
@@ -94,7 +71,7 @@ namespace DesafioArvore.Controllers
         }
        
 
-        [Route("ObterCoresPele")]
+        [Route("pessoas/cores")]
         [HttpGet()]
         public ActionResult<IEnumerable<string>> ObterCoresPele()
         {
@@ -102,7 +79,7 @@ namespace DesafioArvore.Controllers
             return coresDaPele;
         }
 
-        [Route("ObterRegioesBrasil")]
+        [Route("pessoas/regioes")]
         [HttpGet()]
         public ActionResult<IEnumerable<string>> ObterRegioesBrasil()
         {
@@ -110,7 +87,7 @@ namespace DesafioArvore.Controllers
             return regioesBrasil;
         }
 
-        [Route("ObterNiveisEscolaridade")]
+        [Route("pessoas/escolaridades")]
         [HttpGet()]
         public ActionResult<IEnumerable<string>> ObterNiveisEscolaridade()
         {
@@ -118,36 +95,18 @@ namespace DesafioArvore.Controllers
             return niveisEscolaridade;
         }
 
-        [Route("HealthCheck")]
+        [Route("pessoas/ping")]
         [HttpGet()]
         public ActionResult<string> HealthCheck()
         {
-            return Ok("up");
+            return Ok("pong");
         }
 
         #endregion
 
         #region POST
 
-        [Route("CadastrarPessoa")]
-        [HttpPost]
-        public async Task<ActionResult> CadastrarPessoa([FromBody] Pessoa pessoa)
-        {
-            try
-            {
-                await _pessoaDomainService.CadastrarPessoa(pessoa);
-
-                return Ok();
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, $"Ocorreu um erro ao cadastrar pessoa: {ex.Message}");
-            }
-
-           
-        }
-
-        [Route("CadastrarPessoas")]
+        [Route("pessoas")]
         [HttpPost]
         public async Task<ActionResult> CadastrarPessoas([FromBody] List<Pessoa> pessoas)
         {
@@ -172,7 +131,7 @@ namespace DesafioArvore.Controllers
 
         #region PUT
 
-        [Route("AtualizarCadastroPessoa")]
+        [Route("pessoas")]
         [HttpPut()]
         public async Task<IActionResult> AtualizarCadastroPessoa(int id, [FromBody] Pessoa pessoa)
         {
@@ -204,7 +163,7 @@ namespace DesafioArvore.Controllers
         
         #region DELETE
 
-        [Route("DeletarPessoa")]
+        [Route("pessoas")]
         [HttpDelete()]
         public async Task<IActionResult> DeletarPessoa(int id)
         {
